@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+</head>
+
+<body>
+    <div class="main" id="collabration">
+    </div>
+</body>
+<script>
+    app.initialized().then(function getClient(_client) {
+        client = _client;
+        client.instance.context().then(function (context) {
+            console.log("from context", context);
+            let iframe = document.createElement("iframe");
+            let mainContent = document.querySelector('#collabration');
+            iframe.src = context.data;
+            iframe.id = "collabration board";
+            iframe.width = "500px";
+            iframe.height = "700px";
+            console.log("inframe", iframe);
+            mainContent.appendChild(iframe);
+        }).catch(function (err) {
+            console.log("err", err);
+        });
+    });
+</script>
+<script type="module" src="https://unpkg.com/@freshworks/crayons@3/dist/crayons/crayons.esm.js"></script>
+<script nomodule src="https://unpkg.com/@freshworks/crayons@3/dist/crayons/crayons.js"></script>
+
+</html>

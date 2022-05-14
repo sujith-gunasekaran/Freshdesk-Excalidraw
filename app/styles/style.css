@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: inherit;
+}
+
+.main {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 10px 8px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid grey;
+  transition: 0.1s all ease-in-out;
+}
+
+input:hover {
+  border: 1px solid rgb(3, 3, 151);
+}
+
+input:focus {
+  border: 1px solid rgb(3, 3, 151);
+}
+
+button {
+  margin: 15px 0px;
+  padding: 12px 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s all ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(3, 3, 151, 0.1);
+}
